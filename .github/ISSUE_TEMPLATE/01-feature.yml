@@ -1,0 +1,69 @@
+name: Feature
+description: A piece of work that adds or changes something in the project.
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One sprint's worth of work or less. If it won't fit in two weeks, split it into two issues.
+
+  - type: textarea
+    attributes:
+      label: What will be true when this is done?
+      description: Describe the outcome, not the activity. "Enemy follows the authored path and despawns at the goal" — not "work on pathing."
+      placeholder: When this is done, ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this matter?
+      description: One or two sentences. Which milestone or sprint goal does it serve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: A checklist someone who is not you could verify by running the build. Use "- [ ]" for each.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estimate
+    attributes:
+      label: Estimate
+      description: Your honest guess at focused working hours. You will compare this to reality at the retro.
+      options:
+        - "1 - under 2 hours"
+        - "2 - half a day"
+        - "3 - about a day"
+        - "5 - two to three days"
+        - "8 - most of a sprint (consider splitting)"
+        - "13 - too big, split it"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes, unknowns, dependencies
+      description: Anything you are unsure about, or anything that has to happen first. If there is a real unknown here, open a Spike instead.
+
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Definition of Ready
+      description: All four must be true before this issue enters a sprint.
+      options:
+        - label: Acceptance criteria are written and someone else could verify them
+        - label: It has an estimate
+        - label: Nothing is blocking it
+        - label: It fits inside one sprint

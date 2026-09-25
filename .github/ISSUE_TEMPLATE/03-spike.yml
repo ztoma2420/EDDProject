@@ -1,0 +1,68 @@
+name: Spike
+description: Time-boxed research. The deliverable is knowledge, not a feature.
+title: "[Spike] "
+labels: ["spike"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open a spike when you genuinely do not know whether something is possible or which
+        approach to take. The time box does not get extended. Spike code is throwaway —
+        do not merge it to `main` and do not build on it.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: The question this spike answers
+      description: One question, phrased so that it has an answer. "Can the engine be built from source on my machine and produce a runnable export?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timebox
+    attributes:
+      label: Time box
+      description: Decided before you start. When it runs out, you write up what you found and stop.
+      options:
+        - "2 hours"
+        - "Half a day"
+        - "One day"
+        - "Two days"
+        - "One sprint"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: What you will actually try
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: What counts as an answer
+      description: What evidence would let you decide either way? Name it now, before you are invested in one outcome.
+    validations:
+      required: true
+
+  - type: input
+    id: risk
+    attributes:
+      label: Related risk from your proposal
+      description: Which risk register entry does this test? If this spike fails, does a fallback trigger fire?
+
+  - type: checkboxes
+    id: closeout
+    attributes:
+      label: Close-out (check when the spike ends)
+      options:
+        - label: Memo written to /docs/spikes/ - what I tried, what happened, what I recommend, evidence
+        - label: Recommendation stated plainly, including "this does not work"
+        - label: Follow-up Feature issues opened, or a fallback triggered
+        - label: Throwaway code left on the spike branch, not merged

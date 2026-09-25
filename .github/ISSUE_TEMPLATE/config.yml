@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sprint Handbook
+    url: https://github.com/USER/REPO/blob/main/docs/sprint-handbook.md
+    about: How sprints, issues, and pull requests work in this course.
+  - name: Ask your instructor
+    url: https://github.com/USER/REPO/discussions
+    about: Stuck for more than two class periods? Write it up and ask.

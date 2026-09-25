@@ -1,0 +1,71 @@
+name: Bug
+description: Something is broken or behaves wrongly.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write this as if you will read it in three months having forgotten everything. You will.
+
+  - type: input
+    id: summary
+    attributes:
+      label: What goes wrong, in one line
+      placeholder: Crash when loading a level with more than 40 units
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      value: |
+        **Expected:** 
+        **Actual:** 
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Build or commit
+      description: Tag, branch, or commit SHA where you saw this.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "Blocker - cannot continue working or demoing"
+        - "Major - core feature broken, workaround exists"
+        - "Minor - wrong but tolerable"
+        - "Cosmetic - looks wrong, works fine"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you have already tried
+      description: Leave blank if you have not started. Fill it in as you investigate so the next person (you) doesn't repeat the work.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output
+      description: Paste stack traces or console output here.
+      render: shell

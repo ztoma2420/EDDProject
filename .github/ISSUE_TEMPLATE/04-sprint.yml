@@ -1,0 +1,81 @@
+name: Sprint
+description: Open one of these on Day 1 of every sprint. It is the home for the whole two weeks.
+title: "Sprint NN: "
+labels: ["sprint"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this on Day 1. Fill the Planning section now, the Checkpoint on Day 5,
+        and Review + Retro on Day 10. Close it at the review. This one issue is the
+        record of the sprint — if you keep it current you never need to look anything up.
+
+  - type: input
+    id: goal
+    attributes:
+      label: "Day 1 — Sprint goal (one sentence)"
+      description: An outcome someone could observe. If it contains the words "work on," rewrite it.
+      placeholder: A build exists in which an enemy walks the authored path and is removed at the goal.
+    validations:
+      required: true
+
+  - type: textarea
+    id: committed
+    attributes:
+      label: "Day 1 — Committed issues"
+      description: List issue numbers with estimates. Total the estimate at the bottom.
+      value: |
+        - [ ] #  — est. 
+        - [ ] #  — est. 
+        - [ ] #  — est. 
+
+        **Total estimate:** 
+    validations:
+      required: true
+
+  - type: textarea
+    id: checkpoint
+    attributes:
+      label: "Day 5 — Mid-sprint checkpoint"
+      description: Answer the question honestly. If the answer is no, cut now and say what you cut.
+      value: |
+        **Will the sprint goal be met? (yes / no)** 
+
+        **If no, which move am I making?**
+        - [ ] Reduce the goal
+        - [ ] Drop an issue to the backlog
+        - [ ] Convert to a spike
+
+        **What I cut and why:** 
+
+  - type: textarea
+    id: review
+    attributes:
+      label: "Day 10 — Review"
+      value: |
+        **Goal met / partly met / missed:** 
+
+        **Demoed build (tag or commit):** 
+
+        **What works:** 
+
+        **What does not:** 
+
+        **Most interesting thing I learned (including things that failed):** 
+
+  - type: textarea
+    id: retro
+    attributes:
+      label: "Day 10 — Retrospective"
+      description: Short and honest. Item 5 is the one that makes the rest count.
+      value: |
+        1. **Estimated vs actual:**  est /  actual — ratio 
+        2. **Went well, keep doing:** 
+        3. **Went badly (no blaming the tools):** 
+        4. **One change for next sprint:** 
+        5. **Did last sprint's change actually happen?** 
+
+  - type: input
+    id: nextgoal
+    attributes:
+      label: "Day 10 — Likely goal for next sprint"
