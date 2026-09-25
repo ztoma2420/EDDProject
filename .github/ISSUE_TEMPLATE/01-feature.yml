@@ -9,6 +9,7 @@ body:
         One sprint's worth of work or less. If it won't fit in two weeks, split it into two issues.
 
   - type: textarea
+    id: outcome
     attributes:
       label: What will be true when this is done?
       description: Describe the outcome, not the activity. "Enemy follows the authored path and despawns at the goal" — not "work on pathing."
